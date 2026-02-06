@@ -8,10 +8,39 @@
 
 @font-face {
   font-family: 'Sora';
-  src: url('/src/assets/fonts/Sora-VariableFont_wght.ttf') format('truetype');
-  font-weight: 100 900; /* Variable font weight range */
+  src: url('/src/assets/fonts/Sora/Sora-VariableFont_wght.ttf')
+    format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+}
+/* @font-face {
+  font-family: 'Sora';
+  src: url('/src/assets/fonts/static/Sora-Regular.ttf') format('truetype');
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/src/assets/fonts/static/Sora-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/src/assets/fonts/static/Sora-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+} */
+
+@theme {
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
 }
 
 @theme inline {
