@@ -1,8 +1,18 @@
-@import "tailwindcss";
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
 
-@custom-variant dark (&:is(.dark *));
+@config '../tailwind.config.js';
+
+@custom-variant dark (&: is(.dark *));
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/src/assets/fonts/Sora-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900; /* Variable font weight range */
+  font-style: normal;
+  font-display: swap;
+}
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -115,10 +125,30 @@
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sora antialiased;
   }
+}
+
+@layer utilities {
+  /* flex utilities */
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .flex-between {
+    @apply flex items-center justify-between;
+  }
+
+  .flex-start {
+    @apply flex items-center justify-start;
+  }
+}
+
+img {
+  user-drag: none;
+  -webkit-user-drag: none; /* For Safari */
+  user-select: none; /* Prevent selection */
+  touch-action: none; /* Disable touch gestures */
+  -webkit-user-select: none; /* For Safari */
 }
